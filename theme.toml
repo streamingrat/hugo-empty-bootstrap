@@ -1,0 +1,12 @@
+name = "hugo-empty-bootstrap"
+license = "MIT"
+licenselink = "https://github.com/streamingrat/hugo-empty-bootstrap/blob/master/LICENSE"
+description = "A theme built on bootstrap and bootstrap-icons."
+homepage = "https://github.com/streamingrat/hugo-empty-bootstrap"
+tags = ["bootstrap"]
+features = ["minimal"]
+min_version = "0.41.0"
+
+[author]
+  name = "Darrel Herbst"
+  homepage = "https://streamingrat.com/"

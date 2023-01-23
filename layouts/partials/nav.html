@@ -1,0 +1,30 @@
+<div class="bg-light mb-4">
+  <div class="container">
+    <nav class="navbar navbar-dark navbar-expand-md">
+      <div class="container-fluid px-0">
+        <a class="navbar-brand" href="/">{{ .Site.params.title }}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            {{ range .Site.Menus.main }}
+            <li class="nav-item">
+              {{ if .Params.New }}
+              <a class="nav-link position-relative bg-warning rounded-pill text-dark" href="{{ .URL }}">{{ .Name }}
+                <span class="position-absolute top-40 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                  <span class="visually-hidden">New!</span>
+                </span>
+              </a>
+              {{ else }}
+              <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+              {{ end }}
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</div>
