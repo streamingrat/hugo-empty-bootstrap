@@ -9,6 +9,7 @@
     <meta name="robots" content="noydir" />
     <link rel="alternate" type="application/atom+xml" title="{{ .Title }} RSS Feed" href="{{.Site.BaseURL}}index.xml" />
     <link rel="canonical" href="{{ .Permalink }}" />
+    <script type="module" src="{{ .Site.BaseURL}}js/color-modes.js"></script>
     <script type="text/javascript" src="{{ .Site.BaseURL}}js/bootstrap.bundle.min.js"></script>
 
     {{ template "_internal/opengraph.html" . }}
