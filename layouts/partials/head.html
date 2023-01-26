@@ -7,9 +7,9 @@
     <meta name="keywords" content="{{ .Site.Params.keywords }}{{ if .Params.tags }}{{ range .Params.tags }}, {{ . }}{{ end }}{{ end }}" />
     <meta name="robots" content="noodp" />
     <meta name="robots" content="noydir" />
-    <link rel="alternate" type="application/atom+xml" title="{{ .Title }} RSS Feed" href="/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="{{ .Title }} RSS Feed" href="{{.Site.BaseURL}}index.xml" />
     <link rel="canonical" href="{{ .Permalink }}" />
-    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="{{ .Site.BaseURL}}js/bootstrap.bundle.min.js"></script>
 
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
@@ -18,7 +18,7 @@
     {{ $style := resources.Get "scss/main.scss" | toCSS  $options | minify }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
 
-    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel='shortcut icon' type='image/x-icon' href='{{.Site.BaseURL}}favicon.ico' />
     {{ range $val := $.Site.Params.customCSS }}
       {{ if gt (len $val) 0 }}
         <link rel="stylesheet" type="text/css" href="{{ $val }}">

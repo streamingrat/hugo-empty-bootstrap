@@ -2,7 +2,7 @@
   <div class="container">
     <nav class="navbar navbar-dark navbar-expand-md">
       <div class="container-fluid px-0">
-        <a class="navbar-brand" href="/">{{ .Site.params.title }}</a>
+        <a class="navbar-brand" href="{{.Site.BaseURL}}">{{ .Site.params.title }}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,7 +17,7 @@
                 </span>
               </a>
               {{ else }}
-              <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+              <a class="nav-link" href="{{ .RelRef }}">{{ .Name }}</a>
               {{ end }}
             </li>
             {{ end }}
