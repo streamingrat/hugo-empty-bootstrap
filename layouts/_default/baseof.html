@@ -4,6 +4,7 @@
     <body>
       {{- partial "header.html" . -}}
       <div class="container">
+        {{- partial "breadcrumb.html" . -}}
         <div id="content">
         {{- block "main" . }}{{- end }}
         </div>
