@@ -3,12 +3,6 @@
 hugo-empty-bootstrap is a minimal blank template you can easily extend.  It was created to be a quick base framework that keeps up with
 bootstrap versions.
 
-> **Note**
->
-> Have to use bootstrap-icons 1.9.0 until https://github.com/twbs/icons/pull/1566 is merged
->
-> or use `"bootstrap-icons": "git+https://github.com/dherbst/icons#fix-dherbst-scss-1378"`
-
 # Instructions for use:
 
 1. In your themes directory run `git submodule add git@github.com:streamingrat/hugo-empty-bootstrap.git`
