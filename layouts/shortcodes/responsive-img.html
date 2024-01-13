@@ -1,0 +1,6 @@
+{{ $width := .Get 2 }}
+{{ if eq $width "" }}
+{{ $width = "256" }}
+{{ end }}
+<img class="d-none d-lg-block" src="{{ .Get 0 }}" alt="{{ .Get 1 }}" width="{{ $width }}">
+<img class="d-lg-none img-fluid w-100 mb-3" src="{{ .Get 0 }}" alt="{{ .Get 1 }}">
